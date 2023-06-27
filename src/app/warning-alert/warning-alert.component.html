@@ -1,0 +1,19 @@
+<p>{{getId()}}: alert: </p>
+<p>{{id+1}}: alert: {{warningContent()}}</p>
+<p [innerText]="propertyBinding">dax {{propertyBinding}}</p>
+
+<button class="btn btn-primary" (click)="getStatus()">{{status}}</button>
+<input type="text" (input)="displayPressedKey($event)" (keydown)="handleEnterKey($event)">
+<p>{{content}}</p>
+
+
+<h1>two way data binding:{{ twoWayDataBinding}}</h1>
+
+
+<input type="text" [(ngModel)]="twoWayDataBinding">
+
+<div>
+  <input type="text" [(ngModel)]="fourTypesDataBinding">
+  <button class="btn btn-primary" (click)="handleButtonClick()"></button>
+  <h1>four type data binding text: {{updatedName}}</h1>
+</div>

@@ -1,0 +1,8 @@
+<button class="btn btn-primary" (click)="handleToogle()">Display Details</button>
+<p *ngIf="display"> Secret password = tuna</p>
+<div *ngIf="clickArray.length > 4">
+  <ng-container *ngFor="let item of clickArray; let i = index">
+    <p [ngClass]="{ 'item': i > 4 }">{{ item }} - {{ i }}</p>
+  </ng-container>
+
+</div>

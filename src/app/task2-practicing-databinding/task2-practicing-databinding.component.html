@@ -1,0 +1,21 @@
+<div>
+  <h1>Task2: Practicing databiding </h1>
+  <ol>
+    <li [ngStyle]="{backgroundColor: getColor()}">Add a input field which updated a property "username"via
+      Two-Way-Bidning</li>
+    <li [ngClass]="{ 'style': username.length > 4 }">Output the username property via String interpolation (in a
+      paragraph below the input)</li>
+
+    <li> Add a button whichj may only be blicked if the username is NOT an empty string</li>
+    <li>Upon cliocking the button, the usenrame shoudl b reset to an empty string</li>
+  </ol>
+
+  <input type="text" [(ngModel)]="username">
+  <p>{{username}}</p>
+  <button class="btn btn-primary" (click)="handleBtnClick()" [disabled]="username.length===0&&true">CLick</button>
+  <p *ngIf="username.length > 4; else noText">text.length > 4</p>
+  <ng-template #noText>
+    <p>text.length smaller than 5</p>
+  </ng-template>
+
+</div>
